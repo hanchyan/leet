@@ -8,8 +8,11 @@ class Solution(object):
                 sub.append(i)
                 new_sub = len(sub)
                 long_sub = max(new_sub, long_sub)
-            # else:
-            #     print("it was already there")
+                print(long_sub)
+            else:
+                sub.clear()
+                print("all clear")
+                print(len(sub))
         print(long_sub)
         
         return 0  # placeholder
@@ -17,8 +20,6 @@ class Solution(object):
 if __name__ == "__main__":
     s = "abcafbcbb"
     Solution().lengthOfLongestSubstring(s)
-
-
 
 
 #it would be like put a character from the string in an array
