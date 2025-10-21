@@ -1,24 +1,24 @@
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         sub = []  # list to store current substring
-        long_sub = 0
-        new_sub = 0
+        long_sub_len = 0
+        new_sub_len = 0
         for i in s:
             if i not in sub:
                 sub.append(i)
-                new_sub = len(sub)
-                long_sub = max(new_sub, long_sub)
-                print(long_sub)
+                new_sub_len = len(sub)
+                long_sub_len = max(new_sub_len, long_sub_len)
+                print(long_sub_len)
             else:
                 sub.clear()
                 print("all clear")
                 print(len(sub))
-        print(long_sub)
+        print(long_sub_len)
         
         return 0  # placeholder
 
 if __name__ == "__main__":
-    s = "abcafbcbb"
+    s = "abcafbcbbqrstuvwx"
     Solution().lengthOfLongestSubstring(s)
 
 
