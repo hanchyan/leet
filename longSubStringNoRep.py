@@ -8,17 +8,17 @@ class Solution(object):
                 sub.append(i)
                 new_sub_len = len(sub)
                 long_sub_len = max(new_sub_len, long_sub_len)
-                print(long_sub_len)
+                # print(long_sub_len)
             else:
                 sub.clear()
                 print("all clear")
-                print(len(sub))
         print(long_sub_len)
         
-        return 0  # placeholder
+        return long_sub_len  # placeholder
 
 if __name__ == "__main__":
-    s = "abcafbcbbqrstuvwx"
+    s = "aab"
+    # s = "qrstuvwxxabcdefghiijklmnopqrstuv"
     Solution().lengthOfLongestSubstring(s)
 
 
