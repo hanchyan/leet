@@ -10,10 +10,13 @@ class Solution(object):
                 sub.append(char)
                 new_sub_len = len(sub)
                 long_sub_len = max(new_sub_len, long_sub_len)
+                print (long_sub_len)
                 i += 1
             else:
-                sub.clear()
-                print("all clear")
+                # sub.clear()
+                print("char clear" +" " +char)
+                first_instance_char = sub.index(char)
+                sub = sub[first_instance_char+1:]  # keep only elements after the first occurrence
                 # i = i -1
                 sub.append(char)
                 i += 1
@@ -22,6 +25,6 @@ class Solution(object):
         return long_sub_len  # placeholder
 
 if __name__ == "__main__":
-    s = "aab"
+    s = "pwwkew"
     # s = "qrstuvwxxabcdefghiijklmnopqrstuv"
     Solution().lengthOfLongestSubstring(s)
